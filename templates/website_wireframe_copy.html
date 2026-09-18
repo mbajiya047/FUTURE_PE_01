@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roots & Whisk — Handcrafted Bread & Honest Coffee | Indiranagar, Bangalore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #F8F5EE;
+      --bg-surface: #FFFFFF;
+      --bg-warm-card: #F2ECE1;
+      --bg-dark: #1E1B18;
+      --text-dark: #221E1A;
+      --text-body: #4E4842;
+      --text-muted: #7A7268;
+      --terracotta: #B8502E;
+      --terracotta-hover: #983E20;
+      --olive: #4F5D48;
+      --border-warm: #E4DCD0;
+      --border-dark: #38322C;
+      --tape: rgba(234, 222, 196, 0.85);
+      --font-serif: 'Fraunces', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-hand: 'Caveat', cursive;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-body);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAVBAR */
+    header {
+      background: rgba(248, 245, 238, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-warm);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+    .brand {
+      text-decoration: none;
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .brand-tag {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.94rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover {
+      color: var(--terracotta);
+    }
+    .btn-hold {
+      background: var(--text-dark);
+      color: #FFF !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 0.9rem !important;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-hold:hover {
+      background: var(--terracotta);
+      transform: translateY(-1px);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 60px 0 80px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--olive);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+      background: #E8EDE4;
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      line-height: 1.12;
+      color: var(--text-dark);
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--terracotta);
+      font-weight: 400;
+    }
+    .hero-body {
+      font-size: 1.12rem;
+      color: var(--text-body);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--terracotta);
+      color: white;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(184, 80, 46, 0.25);
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: var(--terracotta-hover);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1.5px solid #D5CDC1;
+      transition: all 0.2s ease;
+    }
+    .btn-outline:hover {
+      background: #EDE6D8;
+      border-color: #B5AA9A;
+    }
+
+    /* Polaroids & Real Imagery Group */
+    .hero-visual {
+      position: relative;
+    }
+    @keyframes gentleFloat {
+      0% { transform: translateY(0px) rotate(-1.5deg); }
+      50% { transform: translateY(-7px) rotate(-0.5deg); }
+      100% { transform: translateY(0px) rotate(-1.5deg); }
+    }
+    .polaroid-main {
+      background: #FFF;
+      padding: 14px 14px 46px 14px;
+      border-radius: 4px;
+      box-shadow: 0 16px 36px rgba(34, 30, 26, 0.12);
+      transform: rotate(-1.5deg);
+      position: relative;
+      border: 1px solid #EBE4D8;
+      animation: gentleFloat 5s ease-in-out infinite;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+    .polaroid-main:hover {
+      animation-play-state: paused;
+      transform: rotate(0deg) scale(1.03);
+      box-shadow: 0 24px 48px rgba(34, 30, 26, 0.18);
+    }
+    .polaroid-main img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .polaroid-main:hover img {
+      transform: scale(1.02);
+    }
+    .polaroid-caption {
+      position: absolute;
+      bottom: 14px;
+      left: 18px;
+      font-family: var(--font-hand);
+      font-size: 1.55rem;
+      color: #383028;
+      transform: rotate(0.5deg);
+    }
+    .scotch-tape {
+      position: absolute;
+      top: -14px;
+      left: 40%;
+      width: 90px;
+      height: 28px;
+      background: var(--tape);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transform: rotate(-3deg);
+      z-index: 10;
+      border-left: 2px dashed rgba(255,255,255,0.4);
+      border-right: 2px dashed rgba(255,255,255,0.4);
+    }
+    .mini-badge-note {
+      position: absolute;
+      bottom: -22px;
+      right: -16px;
+      background: #FFF9EC;
+      border: 1px solid #E4D2B2;
+      padding: 14px 18px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      max-width: 220px;
+      transform: rotate(2.5deg);
+      z-index: 5;
+    }
+    .mini-badge-note p {
+      font-family: var(--font-hand);
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      line-height: 1.3;
+      margin: 0;
+    }
+    .mini-badge-note strong {
+      color: var(--terracotta);
+    }
+
+    /* THE DAILY CHALKBOARD */
+    .chalkboard-section {
+      padding: 40px 0 80px;
+    }
+    .chalkboard-wrap {
+      background: #1C1E1B;
+      color: #EDECE8;
+      border-radius: 12px;
+      border: 10px solid #5A4031;
+      box-shadow: 0 18px 44px rgba(0,0,0,0.22), inset 0 0 40px rgba(0,0,0,0.5);
+      padding: 42px 48px;
+      position: relative;
+    }
+    .chalkboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px dashed #42463F;
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+    }
+    .chalkboard-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: #FFF;
+      letter-spacing: -0.5px;
+    }
+    .chalkboard-date {
+      font-family: var(--font-hand);
+      font-size: 1.6rem;
+      color: #FCD34D;
+    }
+    .chalk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .chalk-col h4 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: #F9A8D4;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #383D35;
+      padding-bottom: 8px;
+    }
+    .chalk-col:nth-child(2) h4 { color: #93C5FD; }
+    .chalk-col:nth-child(3) h4 { color: #86EFAC; }
+    .chalk-item {
+      margin-bottom: 18px;
+    }
+    .chalk-item-name {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #FFF;
+    }
+    .chalk-item-desc {
+      font-size: 0.88rem;
+      color: #A3A89E;
+      line-height: 1.4;
+      margin-top: 4px;
+    }
+    .chalk-note {
+      font-family: var(--font-hand);
+      font-size: 1.35rem;
+      color: #FDE047;
+      margin-top: 24px;
+      text-align: center;
+      border-top: 1px dashed #42463F;
+      padding-top: 18px;
+    }
+
+    /* THE FOUNDER'S NOTE & SCRAPBOOK */
+    .story-section {
+      padding: 60px 0 80px;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .story-photo-stack {
+      position: relative;
+    }
+    /* STORY POLAROID 3D FLIP ARCHITECTURE */
+    .story-photo-stack {
+      max-width: 440px;
+      margin: 0 auto;
+      perspective: 1400px;
+      -webkit-perspective: 1400px;
+    }
+    @keyframes storyGentleSway {
+      0% { transform: translateY(0px) rotate(0.8deg); }
+      50% { transform: translateY(-8px) rotate(1.8deg); }
+      100% { transform: translateY(0px) rotate(0.8deg); }
+    }
+    .story-floating-wrap {
+      animation: storyGentleSway 5s ease-in-out infinite;
+    }
+    .story-floating-wrap:hover {
+      animation-play-state: paused;
+    }
+
+    .story-flip-card {
+      width: 100%;
+      height: 485px;
+      position: relative;
+      cursor: pointer;
+      perspective: 1200px;
+      -webkit-perspective: 1200px;
+    }
+
+    .story-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.75s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+    }
+
+    /* THE FLIPPED TRIGGER */
+    .story-flip-card.is-flipped .story-card-inner,
+    .story-flip-card.flipped .story-card-inner {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+    }
+
+    .story-card-front,
+    .story-card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* FRONT FACE */
+    .story-card-front {
+      background: #FFFFFF;
+      border: 1px solid #E6DED1;
+      padding: 14px 14px 48px 14px;
+      box-shadow: 0 16px 38px rgba(34, 30, 26, 0.12);
+      transform: rotateY(0deg);
+      -webkit-transform: rotateY(0deg);
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+    .story-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+      pointer-events: none;
+      user-select: none;
+    }
+    .story-card-front .caption {
+      position: absolute;
+      bottom: 14px;
+      left: 18px;
+      font-family: var(--font-hand);
+      font-size: 1.45rem;
+      color: #383028;
+      pointer-events: none;
+      user-select: none;
+    }
+    .story-zoom-hint {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(4px);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* BACK FACE */
+    .story-card-back {
+      background: #FFFDF8;
+      border: 1.5px solid #E2D7C5;
+      padding: 34px 28px;
+      box-shadow: 0 16px 38px rgba(34, 30, 26, 0.15);
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+    .story-flip-card.is-flipped .story-card-front,
+    .story-flip-card.flipped .story-card-front {
+      z-index: 1;
+    }
+    .story-flip-card.is-flipped .story-card-back,
+    .story-flip-card.flipped .story-card-back {
+      z-index: 2;
+    }
+    .back-tape {
+      position: absolute;
+      top: -12px;
+      left: 36%;
+      width: 95px;
+      height: 26px;
+      background: var(--tape);
+      transform: rotate(-2deg);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .back-heading {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      border-bottom: 1px dashed #D5C9B7;
+      padding-bottom: 10px;
+      font-weight: 700;
+    }
+    .back-note-text {
+      font-family: var(--font-hand);
+      font-size: 1.45rem;
+      color: #332B24;
+      line-height: 1.55;
+      margin: 16px 0;
+    }
+    .back-note-text em {
+      color: var(--terracotta);
+      font-style: normal;
+      font-weight: 700;
+    }
+    .back-footer-tag {
+      border-top: 1px dashed #D5C9B7;
+      padding-top: 10px;
+      font-size: 0.84rem;
+      color: #7A7063;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .back-prompt {
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+
+    /* Flip Control Buttons */
+    .flip-actions-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .btn-flip-control {
+      background: white;
+      border: 1px solid #D5C9B7;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      padding: 7px 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .btn-flip-control:hover {
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+      transform: translateY(-1px);
+    }
+    .story-content h2 {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      line-height: 1.15;
+      color: var(--text-dark);
+      margin-bottom: 22px;
+    }
+    .story-content p {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      margin-bottom: 18px;
+      line-height: 1.75;
+    }
+    .story-quote {
+      background: var(--bg-warm-card);
+      border-left: 4px solid var(--terracotta);
+      padding: 20px 24px;
+      border-radius: 0 6px 6px 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-dark);
+      font-size: 1.05rem;
+    }
+    .story-signature {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .sign-name {
+      font-family: var(--font-hand);
+      font-size: 2.2rem;
+      color: var(--terracotta);
+      line-height: 1;
+    }
+    .sign-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* THE BAKERY CARDS WITH REAL PHOTOS */
+    .bakes-section {
+      padding: 60px 0 80px;
+      border-top: 1px solid var(--border-warm);
+    }
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+    .section-head h2 {
+      font-family: var(--font-serif);
+      font-size: 2.7rem;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+    .section-head p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+    }
+
+    /* Category Filter Option Bar */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+    .filter-btn {
+      background: white;
+      border: 1.5px solid var(--border-warm);
+      color: var(--text-dark);
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .filter-btn:hover {
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(184, 80, 46, 0.12);
+    }
+    .filter-btn.active {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: white;
+      box-shadow: 0 4px 16px rgba(184, 80, 46, 0.32);
+      transform: translateY(-1px) scale(1.03);
+    }
+    .filter-btn .count-badge {
+      font-size: 0.75rem;
+      background: rgba(0, 0, 0, 0.08);
+      padding: 2px 7px;
+      border-radius: 999px;
+    }
+    .filter-btn.active .count-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: white;
+    }
+
+    .bakes-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      position: relative;
+    }
+    .bake-card {
+      background: white;
+      border: 1px solid var(--border-warm);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(34, 30, 26, 0.05);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .bake-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 38px rgba(34, 30, 26, 0.12);
+      border-color: #D8CEBD;
+    }
+    .bake-card.card-hide {
+      display: none !important;
+    }
+    .bake-card.card-animate-in {
+      animation: cardPopIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes cardPopIn {
+      0% {
+        opacity: 0;
+        transform: translateY(22px) scale(0.96);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Photo Container with Ken Burns Zoom & Lighting */
+    .bake-img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 230px;
+      background: #EFE9DE;
+    }
+    .bake-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.75s cubic-bezier(0.2, 1, 0.25, 1), filter 0.4s ease;
+    }
+    .bake-card:hover .bake-img-wrap img {
+      transform: scale(1.09) rotate(0.6deg);
+      filter: brightness(1.04) contrast(1.02);
+    }
+    .bake-img-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(20, 16, 12, 0.45) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+    .bake-card:hover .bake-img-wrap::after {
+      opacity: 1;
+    }
+    .photo-zoom-hint {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      color: var(--text-dark);
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 999px;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .bake-card:hover .photo-zoom-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bake-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .bake-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+    .bake-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+    .bake-price {
+      font-weight: 700;
+      color: var(--terracotta);
+      font-size: 1.15rem;
+    }
+    .bake-desc {
+      font-size: 0.94rem;
+      color: var(--text-body);
+      margin-bottom: 18px;
+      line-height: 1.55;
+    }
+    .bake-meta {
+      background: #F8F5EE;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      color: #635A4F;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Interactive Lightbox Modal */
+    .lightbox-backdrop {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(18, 15, 12, 0.82);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+      padding: 20px;
+    }
+    .lightbox-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .lightbox-card {
+      background: #FFF;
+      border-radius: 14px;
+      max-width: 680px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 28px 70px rgba(0,0,0,0.4);
+      transform: scale(0.92) translateY(24px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .lightbox-backdrop.active .lightbox-card {
+      transform: scale(1) translateY(0);
+    }
+    .lightbox-img-wrap {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      background: #2B2621;
+    }
+    .lightbox-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .lightbox-body {
+      padding: 28px;
+    }
+    .lightbox-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+    .lightbox-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+    .lightbox-price {
+      font-size: 1.3rem;
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+    .lightbox-desc {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .lightbox-note {
+      background: #FFF9ED;
+      border-left: 3px solid var(--terracotta);
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      font-family: var(--font-hand);
+      font-size: 1.3rem;
+      color: #78350F;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(0, 0, 0, 0.65);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+      z-index: 10;
+    }
+    .lightbox-close:hover {
+      background: var(--terracotta);
+      transform: rotate(90deg);
+    }
+
+    /* THE 4 RULES - KITCHEN MANIFESTO UPGRADED */
+    .rules-grid-section {
+      background: #EFE7DA;
+      border-radius: 16px;
+      padding: 52px 44px;
+      margin: 60px 0 80px;
+      border: 1px solid #D8CEBD;
+    }
+    .rules-header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .rules-header-wrap h3 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .rules-header-wrap .sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .rules-filter-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .rule-nav-btn {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid #D5C9B7;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .rule-nav-btn:hover {
+      background: white;
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+      transform: translateY(-2px);
+    }
+    .rule-nav-btn.active {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: white;
+      box-shadow: 0 4px 12px rgba(184, 80, 46, 0.25);
+    }
+
+    .four-rules {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1080px) {
+      .four-rules { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .four-rules { grid-template-columns: 1fr; }
+    }
+
+    .rule-item {
+      background: #FFFFFF;
+      border-radius: 12px;
+      border: 1.5px solid #DFD6C7;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(34, 30, 26, 0.04);
+      position: relative;
+    }
+    .rule-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 36px rgba(34, 30, 26, 0.12);
+      border-color: var(--terracotta);
+    }
+    .rule-item.highlighted-rule {
+      border-color: var(--terracotta);
+      box-shadow: 0 0 0 3px rgba(184, 80, 46, 0.22), 0 16px 36px rgba(34, 30, 26, 0.12);
+      transform: translateY(-6px) scale(1.02);
+    }
+
+    .rule-photo-wrap {
+      height: 140px;
+      position: relative;
+      overflow: hidden;
+      background: #25211D;
+    }
+    .rule-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.65s cubic-bezier(0.2, 1, 0.3, 1), filter 0.35s ease;
+    }
+    .rule-item:hover .rule-photo-wrap img {
+      transform: scale(1.12);
+      filter: brightness(1.05);
+    }
+    .rule-photo-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, transparent 40%, rgba(20, 16, 12, 0.5) 100%);
+      pointer-events: none;
+    }
+    .rule-chip {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(4px);
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      padding: 3px 9px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+    .rule-zoom-tag {
+      position: absolute;
+      bottom: 8px;
+      right: 10px;
+      color: #FFF;
+      font-size: 0.72rem;
+      font-weight: 600;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: all 0.25s ease;
+    }
+    .rule-item:hover .rule-zoom-tag {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .rule-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .rule-title {
+      font-weight: 700;
+      font-size: 1.08rem;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .rule-body {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+    .rule-action-link {
+      margin-top: auto;
+      font-family: var(--font-hand);
+      font-size: 1.18rem;
+      color: var(--terracotta);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 600;
+    }
+
+    /* LOCAL INDIRANAGAR FAQ ACCORDION */
+    .faq-area {
+      padding: 40px 0 80px;
+    }
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border-warm);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      padding: 24px 28px;
+      transition: border-color 0.2s;
+    }
+    .faq-item:hover {
+      border-color: #CFC5B4;
+    }
+    .faq-q {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-badge {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: #F1ECE3;
+      color: var(--text-muted);
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .faq-a {
+      font-size: 0.98rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    /* CONVERSION / WHATSAPP CALLOUT */
+    .reserve-card {
+      background: #FFF9ED;
+      border: 2px solid #E8CBA3;
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+      margin-bottom: 80px;
+      position: relative;
+    }
+    .reserve-card h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: #78350F;
+      margin-bottom: 16px;
+    }
+    .reserve-card p {
+      font-size: 1.1rem;
+      color: #92400E;
+      max-width: 650px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .reserve-btns {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-wa-action {
+      background: #166534;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(22, 101, 52, 0.25);
+      transition: all 0.2s ease;
+    }
+    .btn-wa-action:hover {
+      background: #14532D;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg-dark);
+      color: #CFC7BD;
+      padding: 64px 0 36px;
+      border-top: 1px solid var(--border-dark);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand h4 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: white;
+      margin-bottom: 14px;
+    }
+    .footer-brand p {
+      color: #A39B8F;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      max-width: 380px;
+    }
+    .footer-col h5 {
+      color: #FFF;
+      font-size: 0.98rem;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer-col p {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: #BDB4A7;
+    }
+    .footer-bottom {
+      border-top: 1px solid #302A24;
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: #8C8274;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero h1 { font-size: 2.7rem; }
+      .chalk-grid { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-title">Roots & Whisk</span>
+        <span class="brand-tag">Micro-Bakery · 12th Main Indiranagar</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#today">Today's Board</a></li>
+        <li><a href="#story">Arjun's Story</a></li>
+        <li><a href="#bakes">Breads & Coffee</a></li>
+        <li><a href="#faqs">Local FAQs</a></li>
+        <li>
+          <a href="https://wa.me/919845012844?text=Hi%20Arjun,%20could%20you%20hold%20a%20loaf%20for%20me%20today?" class="btn-hold">
+            Hold a Loaf (WhatsApp)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-eyebrow">Stone Decks · Wild Starter · Zero Chemicals</span>
+        <h1>We don't rush bread. We don't burn coffee. <em>Ever.</em></h1>
+        <p class="hero-body">
+          Hi, I’m Arjun. Most mornings I’m in this kitchen by 4:15 AM covered in flour and checking our 5-year-old sourdough starter. We make naturally fermented loaves with stone-ground flour, water, and salt. No chemical softeners, no commercial yeast, and no shortcuts. Pull up a wooden chair, order a flat white, and take a breather from 12th Main.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/919845012844?text=Hi%20Arjun,%20I'd%20like%20to%20reserve%20a%20loaf%20for%20pickup" class="btn-primary">
+            💬 WhatsApp Us to Hold a Loaf
+          </a>
+          <a href="#today" class="btn-outline">
+            See Today's Fresh Bakes
+          </a>
+        </div>
+      </div>
+
+      <!-- Real floured hands & loaf photo -->
+      <div class="hero-visual">
+        <div class="scotch-tape"></div>
+        <div class="polaroid-main">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Fresh artisan sourdough bread dusted with flour" />
+          <div class="polaroid-caption">Batch #1 out of stone deck at 7:30 AM</div>
+        </div>
+        <div class="mini-badge-note">
+          <p>“Barnaby, our retriever, is asleep under table 3. <strong>Feel free to say hi.</strong>”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY CHALKBOARD BOARD -->
+  <section class="chalkboard-section" id="today">
+    <div class="container">
+      <div class="chalkboard-wrap">
+        <div class="chalkboard-header">
+          <div>
+            <h3 class="chalkboard-title">Today's Kitchen Board</h3>
+            <span style="color: #9CA3AF; font-size: 0.9rem;">Freshly updated every morning at 7:00 AM</span>
+          </div>
+          <div class="chalkboard-date">Oven Schedule: 7:30 AM & 3:30 PM</div>
+        </div>
+
+        <div class="chalk-grid">
+          <!-- Breads -->
+          <div class="chalk-col">
+            <h4>🥖 From The Stone Deck</h4>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>Country Classic Boule</span> <span>₹260</span></div>
+              <div class="chalk-item-desc">36h wild ferment, stone-ground MP wheat, crackling crust.</div>
+            </div>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>Seeded Dark Rye</span> <span>₹310</span></div>
+              <div class="chalk-item-desc">Toasted flax, sunflower, and black sesame. Dense & hearty.</div>
+            </div>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>Cheddar & Pickled Jalapeño</span> <span>₹380</span></div>
+              <div class="chalk-item-desc">Sharp aged white cheddar with crispy cheese frico edges.</div>
+            </div>
+          </div>
+
+          <!-- Coffee -->
+          <div class="chalk-col">
+            <h4>☕ From The Lever Machine</h4>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>Double Ristretto Flat White</span> <span>₹220</span></div>
+              <div class="chalk-item-desc">Biligirirangana Hills lot. Silky 62°C farm milk.</div>
+            </div>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>V60 Single-Origin Pour-Over</span> <span>₹240</span></div>
+              <div class="chalk-item-desc">Chikmagalur washed Selection 9. Apricot & wild honey notes.</div>
+            </div>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>24h Cascara Citrus Brew</span> <span>₹210</span></div>
+              <div class="chalk-item-desc">Sun-dried coffee cherry husk cold steeped with sweet lime.</div>
+            </div>
+          </div>
+
+          <!-- Kitchen Plates -->
+          <div class="chalk-col">
+            <h4>🍳 All-Day Sourdough Plates</h4>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>Whipped Ricotta Tartine</span> <span>₹340</span></div>
+              <div class="chalk-item-desc">Slow-roasted cherry tomatoes, raw garlic rub, fresh basil.</div>
+            </div>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>Smoked Chicken & Mustard Rye</span> <span>₹420</span></div>
+              <div class="chalk-item-desc">House-fermented whole-grain mustard, pickled red onions.</div>
+            </div>
+            <div class="chalk-item">
+              <div class="chalk-item-name"><span>Brioche Cast-Iron Toast</span> <span>₹360</span></div>
+              <div class="chalk-item-desc">Vanilla custard soak, salted butter, raw Coorg forest honey.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chalk-note">
+          ✍️ “If you're visiting after 4 PM, WhatsApp us ahead of time. Once the evening tech crowd steps out, the bread rack empties fast!” — Arjun
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARJUN'S STORY & ORIGIN -->
+  <section class="story-section" id="story">
+    <div class="container story-grid">
+      <div class="story-photo-stack">
+        <div class="story-floating-wrap">
+          <div class="story-flip-card" id="storyCard" title="Click to flip photo">
+            <div class="story-card-inner">
+              <!-- Front Photo Face -->
+              <div class="story-card-front">
+                <span class="story-zoom-hint">🔄 Click photo to flip note</span>
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80" alt="Arjun in his baker apron smiling" />
+                <div class="caption">Arjun in the Indiranagar kitchen, 6:00 AM</div>
+              </div>
+
+              <!-- Backside Face (Handwritten Baker Diary) -->
+              <div class="story-card-back">
+                <div class="back-tape"></div>
+                <div class="back-heading">📓 Baker’s Field Journal — 2019</div>
+                <div class="back-note-text">
+                  “Starter doubled in 4 hours at 28°C. Crumb is finally open.<br><br>
+                  <em>Flour:</em> Stone-ground MP wheat.<br>
+                  <em>Hydration:</em> 78% cold well water.<br>
+                  <em>Bake:</em> 250°C stone deck.<br><br>
+                  Zero industrial yeast. No chemicals. Bangalore kitchen dream starts now.”
+                </div>
+                <div class="back-footer-tag">
+                  <span>✍️ Arjun’s Pondicherry notes</span>
+                  <span class="back-prompt">🔄 Click to flip photo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls underneath -->
+        <div class="flip-actions-bar">
+          <button class="btn-flip-control" id="flipBtn" type="button">
+            🔄 Flip to Read Arjun's Journal
+          </button>
+          <button class="btn-flip-control" id="inspectArjunBtn" type="button">
+            🔍 Inspect High-Res
+          </button>
+        </div>
+      </div>
+
+      <div class="story-content">
+        <span class="hero-eyebrow">The Real Story</span>
+        <h2>"I spent eight years writing software specs before I realized I was starving for real food."</h2>
+        <p>
+          Like a lot of folks in Bangalore, my twenties were a blur of 14-hour days, cold takeout eaten over a laptop keyboard, and bitter coffee swallowed solely for the caffeine hit. I bought bread that stayed suspiciously soft for three weeks on my kitchen counter and wondered why my stomach hurt every single afternoon.
+        </p>
+        <p>
+          In 2019, I spent three months on an organic farm in Pondicherry. An old French baker named Jean-Marc handed me a jar of bubbling wild starter, stone-ground flour, and well water. He told me: <em>'Arjun, real bread isn't manufactured. It's raised.'</em>
+        </p>
+        
+        <div class="story-quote">
+          “You cannot hurry a 36-hour wild fermentation with an agile sprint. The dough moves when it wants to move. It taught me patience I never had in tech.”
+        </div>
+
+        <p>
+          In 2021, I found this sunlit corner on 12th Main Road, Indiranagar. I brought in a stone deck oven, partnered directly with a multi-generation coffee family in Chikmagalur, and opened the doors. We aren't a venture-backed franchise and we don't plan to be. We just want to be your neighborhood bakehouse where you know exactly what went into your breakfast.
+        </p>
+
+        <div class="story-signature">
+          <div>
+            <div class="sign-name">Arjun Sen</div>
+            <div class="sign-title">Founder & Baker · Roots & Whisk</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MENU / OFFERINGS WITH HIGH RESOLUTION IMAGERY -->
+  <section class="bakes-section" id="bakes">
+    <div class="container">
+      <div class="section-head">
+        <span class="hero-eyebrow">Explore By Category</span>
+        <h2>Crafted by Hand Every Single Morning</h2>
+        <p>Choose an option below to filter our daily bakes, specialty coffee, and kitchen plates. Click any photo to inspect details.</p>
+      </div>
+
+      <!-- ANIMATED CATEGORY FILTER OPTION BAR -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">
+          ✨ All Specialties <span class="count-badge">6</span>
+        </button>
+        <button class="filter-btn" data-filter="breads">
+          🥖 Stone Deck Breads <span class="count-badge">2</span>
+        </button>
+        <button class="filter-btn" data-filter="coffee">
+          ☕ Specialty Coffee <span class="count-badge">2</span>
+        </button>
+        <button class="filter-btn" data-filter="pastries">
+          🥐 Laminated Pastries <span class="count-badge">1</span>
+        </button>
+        <button class="filter-btn" data-filter="plates">
+          🍳 Kitchen Plates <span class="count-badge">1</span>
+        </button>
+      </div>
+
+      <div class="bakes-cards" id="bakesGrid">
+        <!-- Card 1: Country Loaf (Breads) -->
+        <div class="bake-card card-animate-in" data-category="breads" onclick="openPhotoModal('https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=1200&q=85', 'Country Classic Boule', '₹260', '80% stone-ground unbleached wheat flour, 20% organic whole rye, pure clean water, and sea salt. Naturally leavened with our 5-year-old sourdough culture and cold-fermented for 36 hours. Sliced thick on request.')">
+          <div class="bake-img-wrap">
+            <span class="photo-zoom-hint">🔍 Tap to inspect</span>
+            <img src="https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=800&q=80" alt="Country Classic Boule" loading="lazy" />
+          </div>
+          <div class="bake-card-body">
+            <div class="bake-card-top">
+              <h3 class="bake-title">Country Classic Boule</h3>
+              <span class="bake-price">₹260</span>
+            </div>
+            <p class="bake-desc">80% stone-ground unbleached wheat, 20% organic rye. Blistered dark caramel crust, tender open crumb with an earthy, gentle lactic acidity.</p>
+            <div class="bake-meta">
+              <span>Hydration: 78%</span>
+              <span>Batches: 7:30 AM & 3:30 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Seeded Dark Rye (Breads) -->
+        <div class="bake-card card-animate-in" data-category="breads" onclick="openPhotoModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85', 'Seeded Mountain Rye Loaf', '₹310', '60% dark organic rye loaded with toasted sunflower seeds, golden flaxseeds, black sesame, and pumpkin seeds. Exceptionally nutty and stays fresh on the counter for 5 to 6 days.')">
+          <div class="bake-img-wrap">
+            <span class="photo-zoom-hint">🔍 Tap to inspect</span>
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Seeded Mountain Rye" loading="lazy" />
+          </div>
+          <div class="bake-card-body">
+            <div class="bake-card-top">
+              <h3 class="bake-title">Seeded Mountain Rye</h3>
+              <span class="bake-price">₹310</span>
+            </div>
+            <p class="bake-desc">Dark organic rye loaded with toasted flax, sunflower, and black sesame seeds. Dense, aromatic, and stays fresh for 5+ days.</p>
+            <div class="bake-meta">
+              <span>Multi-Seed Blend</span>
+              <span>Morning Batch (7:30 AM)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Flat White (Coffee) -->
+        <div class="bake-card card-animate-in" data-category="coffee" onclick="openPhotoModal('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=85', 'Direct-Estate Flat White', '₹220', 'Double ristretto extraction pulled on our manual lever machine, folded into silky 62°C farm milk. Tasting notes of rich milk chocolate, toasted macadamia, and red apple.')">
+          <div class="bake-img-wrap">
+            <span class="photo-zoom-hint">🔍 Tap to inspect</span>
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Specialty Coffee Flat White" loading="lazy" />
+          </div>
+          <div class="bake-card-body">
+            <div class="bake-card-top">
+              <h3 class="bake-title">Direct-Estate Flat White</h3>
+              <span class="bake-price">₹220</span>
+            </div>
+            <p class="bake-desc">Short double extraction pulled on our manual lever machine. Notes of milk chocolate, macadamia, and red apple. Silky steamed farm or oat milk.</p>
+            <div class="bake-meta">
+              <span>Chikmagalur Arabica</span>
+              <span>Light-Medium Roast</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Single-Origin V60 Pour-Over (Coffee) -->
+        <div class="bake-card card-animate-in" data-category="coffee" onclick="openPhotoModal('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85', 'Single-Origin V60 Pour-Over', '₹240', 'Biligirirangana Hills Estate, Washed Selection 9 (1,400m elevation). Clean, tea-like body with vibrant notes of dried apricot, orange blossom, and raw cane sugar.')">
+          <div class="bake-img-wrap">
+            <span class="photo-zoom-hint">🔍 Tap to inspect</span>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Single-Origin V60 Pour-Over" loading="lazy" />
+          </div>
+          <div class="bake-card-body">
+            <div class="bake-card-top">
+              <h3 class="bake-title">Single-Origin V60 Pour-Over</h3>
+              <span class="bake-price">₹240</span>
+            </div>
+            <p class="bake-desc">Biligirirangana Hills lot (1,400m). Clean, tea-like body with vibrant notes of dried apricot, orange blossom, and raw cane sugar.</p>
+            <div class="bake-meta">
+              <span>Mahlkönig EK43</span>
+              <span>Japanese Filter Paper</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Cardamom Buns & Croissant (Pastries) -->
+        <div class="bake-card card-animate-in" data-category="pastries" onclick="openPhotoModal('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=85', 'Cardamom Buns & Butter Croissants', '₹180 / ₹210', '36 laminated layers of French AOP cultured butter folded into sweet wild-ferment dough, crushed Idukki green cardamom pods, and pearl sugar. Shatteringly flaky crust.')">
+          <div class="bake-img-wrap">
+            <span class="photo-zoom-hint">🔍 Tap to inspect</span>
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="French Butter Croissant" loading="lazy" />
+          </div>
+          <div class="bake-card-body">
+            <div class="bake-card-top">
+              <h3 class="bake-title">Cardamom Buns & Croissants</h3>
+              <span class="bake-price">₹180 / ₹210</span>
+            </div>
+            <p class="bake-desc">Laminated French cultured butter layered into wild-ferment sweet dough, crushed Idukki green cardamom pods, and pearl sugar. Shatteringly flaky.</p>
+            <div class="bake-meta">
+              <span>36 Laminated Layers</span>
+              <span>French AOP Butter</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Whipped Ricotta Tartine (Plates) -->
+        <div class="bake-card card-animate-in" data-category="plates" onclick="openPhotoModal('https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=85', 'Whipped Ricotta & Tomato Tartine', '₹340', 'Thick slice of toasted Country Sourdough rubbed with raw garlic, topped with house-whipped lemon ricotta, blistered organic cherry tomatoes cooked in cold-pressed olive oil, fresh basil, and coarse sea salt.')">
+          <div class="bake-img-wrap">
+            <span class="photo-zoom-hint">🔍 Tap to inspect</span>
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80" alt="Whipped Ricotta & Tomato Tartine" loading="lazy" />
+          </div>
+          <div class="bake-card-body">
+            <div class="bake-card-top">
+              <h3 class="bake-title">Whipped Ricotta Tartine</h3>
+              <span class="bake-price">₹340</span>
+            </div>
+            <p class="bake-desc">Toasted Country Sourdough with raw garlic rub, house lemon ricotta, blistered organic cherry tomatoes in cold-pressed olive oil, and fresh garden basil.</p>
+            <div class="bake-meta">
+              <span>Cast-Iron Toasted</span>
+              <span>Served 8:00 AM – 8:30 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KITCHEN RULES MANIFESTO UPGRADED WITH PHOTOS & CHOOSE OPTIONS -->
+      <div class="rules-grid-section">
+        <div class="rules-header-wrap">
+          <div>
+            <span class="hero-eyebrow" style="margin-bottom: 8px;">Our Kitchen Ethics</span>
+            <h3>The 4 Rules We Never Break</h3>
+            <p class="sub">Non-negotiable standards we established on day one. Click any card to inspect the craft.</p>
+          </div>
+          <div class="rules-filter-nav">
+            <button class="rule-nav-btn active" data-rule="all">Show All 4</button>
+            <button class="rule-nav-btn" data-rule="rule1">01 Flour</button>
+            <button class="rule-nav-btn" data-rule="rule2">02 Coffee</button>
+            <button class="rule-nav-btn" data-rule="rule3">03 Pricing</button>
+            <button class="rule-nav-btn" data-rule="rule4">04 Zero Waste</button>
+          </div>
+        </div>
+
+        <div class="four-rules" id="fourRulesGrid">
+          <!-- Rule 1 -->
+          <div class="rule-item" data-rule="rule1" onclick="openPhotoModal('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85', 'Rule 01: Zero Dough Improvers', 'Stone Deck Principle', 'If it didn’t come from heritage whole grains, clean water, and pure sea salt, it doesn’t go into our mixing bowls. No industrial yeast, no chemical conditioners, and no artificial enzymes. Ever.')">
+            <div class="rule-photo-wrap">
+              <span class="rule-chip">01</span>
+              <span class="rule-zoom-tag">🔍 Click to inspect</span>
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Stone-ground flour and sourdough dough" loading="lazy" />
+            </div>
+            <div class="rule-content">
+              <h4 class="rule-title">Zero Dough Improvers</h4>
+              <p class="rule-body">No commercial enzymes, calcium propionate, or industrial yeast. If it didn't come from grain, water, and sea salt, it's not in our bread.</p>
+              <div class="rule-action-link">Read baker's note →</div>
+            </div>
+          </div>
+
+          <!-- Rule 2 -->
+          <div class="rule-item" data-rule="rule2" onclick="openPhotoModal('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=85', 'Rule 02: Direct Estate Sourcing', 'Fair Trade Commitment', 'We know the Moily family who grows our Arabica beans in Chikmagalur. We visit the plantation twice a year, cup the harvest lots together, and pay direct fair-trade premiums with zero broker middlemen.')">
+            <div class="rule-photo-wrap">
+              <span class="rule-chip">02</span>
+              <span class="rule-zoom-tag">🔍 Click to inspect</span>
+              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Coffee estate in Chikmagalur" loading="lazy" />
+            </div>
+            <div class="rule-content">
+              <h4 class="rule-title">Direct Estate Sourcing</h4>
+              <p class="rule-body">We know the Moily family who grows our beans in Chikmagalur. We pay direct fair trade premiums with zero broker middlemen.</p>
+              <div class="rule-action-link">View plantation story →</div>
+            </div>
+          </div>
+
+          <!-- Rule 3 -->
+          <div class="rule-item" data-rule="rule3" onclick="openPhotoModal('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=85', 'Rule 03: Tax-Inclusive Menu', 'Honest Bill Guarantee', 'Bangalore cafes love adding surprise 10% service charges and packaging markups when you tap your card. We despise that. The price on our chalkboard is the exact penny you pay.')">
+            <div class="rule-photo-wrap">
+              <span class="rule-chip">03</span>
+              <span class="rule-zoom-tag">🔍 Click to inspect</span>
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Cafe chalkboard register" loading="lazy" />
+            </div>
+            <div class="rule-content">
+              <h4 class="rule-title">Tax-Inclusive Menu</h4>
+              <p class="rule-body">The price on the board is the exact price you pay. No unexpected 10% service charges or packaging markups when you tap your card.</p>
+              <div class="rule-action-link">Transparent bill policy →</div>
+            </div>
+          </div>
+
+          <!-- Rule 4 -->
+          <div class="rule-item" data-rule="rule4" onclick="openPhotoModal('https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=1200&q=85', 'Rule 04: Zero Food Waste', 'Community & Craft', 'Real bread doesn’t belong in a landfill. Any unsold loaves at the end of the day are turned into garlic herb crostini, baked into cinnamon bread pudding, or shared with local shelters.')">
+            <div class="rule-photo-wrap">
+              <span class="rule-chip">04</span>
+              <span class="rule-zoom-tag">🔍 Click to inspect</span>
+              <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80" alt="Golden toasted crostini" loading="lazy" />
+            </div>
+            <div class="rule-content">
+              <h4 class="rule-title">Zero Food Waste</h4>
+              <p class="rule-body">Yesterday's unsold loaves are sliced into garlic crostini, turned into our cinnamon bread pudding, or shared with local shelters.</p>
+              <div class="rule-action-link">How we recycle bread →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL QUESTIONS (HONEST FAQS) -->
+  <section class="faq-area" id="faqs">
+    <div class="container">
+      <div class="section-head">
+        <span class="hero-eyebrow">Straight Talk</span>
+        <h2>Questions Folks in Indiranagar Ask Us</h2>
+        <p>No corporate PR responses. Here is how things actually work here.</p>
+      </div>
+
+      <div style="max-width: 840px; margin: 0 auto;">
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-badge">Remote Work</span> "Can I bring my laptop and work here?"</h3>
+          <p class="faq-a">
+            <strong>Tuesday through Friday: Absolutely yes.</strong> We have individual power outlets along the wall tables, reliable 250 Mbps fiber Wi-Fi, and our team will never hover over your table asking you to order more. <strong>On Saturdays and Sundays:</strong> We ask guests to keep the main dining tables laptop-free between 11:00 AM and 3:00 PM so brunch diners and families don't face hour-long sidewalk queues.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-badge">Parking</span> "Where on 12th Main can I park?"</h3>
+          <p class="faq-a">
+            If you ride a scooter or bike, park right in front of our verandah wooden gate. If you're driving a four-wheeler, morning street parking is fairly easy. But during evening peak (5 PM – 8 PM), please don't circle 12th Main like a hawk—park at the BBMP multi-level lot near 100ft Road and take the 3-minute walk under the gulmohar trees.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-badge">Pets</span> "Can I bring my dog or cat?"</h3>
+          <p class="faq-a">
+            <strong>100% yes!</strong> Our shaded front verandah is completely pet-friendly. We keep clean stainless steel water bowls, and our counter staff keeps a jar of homemade dehydrated chicken-and-oat treats for four-legged regulars.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-badge">Gluten</span> "I get bloated from regular bread. Can I eat this?"</h3>
+          <p class="faq-a">
+            While our kitchen mills wheat flour (so it is <em>not</em> certified celiac-safe), many customers who struggle with commercial supermarket bread eat our sourdough with zero discomfort. That's because our 36-hour wild lactobacillus fermentation pre-digests the complex starches and gluten proteins naturally before it ever touches the oven.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONVERSION CARD -->
+  <section class="container">
+    <div class="reserve-card">
+      <span class="hero-eyebrow" style="background: #FDE68A; color: #92400E;">Never Miss A Loaf</span>
+      <h2>Don't arrive to an empty bread basket.</h2>
+      <p>
+        Because we bake in batches of only 24 loaves per oven cycle, popular varieties like the Jalapeño Cheddar and Seeded Rye sell out fast. Send us a quick WhatsApp note and we'll label a warm loaf with your name.
+      </p>
+
+      <div class="reserve-btns">
+        <a href="https://wa.me/919845012844?text=Hi%20Arjun,%20I'd%20like%20to%20reserve%20a%20Country%20Classic%20loaf%20for%20pickup%20today" class="btn-wa-action">
+          💬 WhatsApp Us to Hold a Loaf
+        </a>
+        <a href="https://maps.google.com/?q=12th+Main+Indiranagar+Bengaluru" class="btn-outline">
+          📍 Open in Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Roots & Whisk</h4>
+          <p>
+            An independent neighborhood micro-bakery and espresso bar. Stone-ground grains, wild cultures, and single-estate coffee.
+          </p>
+          <p style="margin-top: 12px; color: #82786B;">
+            #412, Ground Floor, 12th Main Road, HAL 2nd Stage, Indiranagar, Bangalore 560038<br>
+            <em>(Directly opposite the 12th Main Sub Post Office)</em>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Kitchen Hours</h5>
+          <p><strong>Tuesday – Friday:</strong><br>7:30 AM – 9:00 PM</p>
+          <p style="margin-top: 10px;"><strong>Saturday – Sunday:</strong><br>7:30 AM – 10:00 PM</p>
+          <p style="margin-top: 10px; color: #E08260;"><em>Monday: Closed for starter feeding</em></p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Say Hello</h5>
+          <p>WhatsApp: +91 98450 12844<br>
+          hello@rootsandwhisk.in<br>
+          Instagram: @rootsandwhisk.blr</p>
+          <p style="margin-top: 14px; color: #82786B; font-size: 0.8rem;">
+            Wi-Fi: 250 Mbps Fiber<br>
+            Pet-Friendly Verandah
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Roots & Whisk Artisan Cafe. Built by humans with flour and honest care.</div>
+        <div>Future Interns Project · FUTURE_PE_01</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE LIGHTBOX PHOTO MODAL -->
+  <div class="lightbox-backdrop" id="photoModal">
+    <div class="lightbox-card">
+      <button class="lightbox-close" id="modalClose" title="Close preview">✕</button>
+      <div class="lightbox-img-wrap">
+        <img id="modalImg" src="" alt="Specialty preview" />
+      </div>
+      <div class="lightbox-body">
+        <div class="lightbox-top">
+          <h3 class="lightbox-title" id="modalTitle">Specialty Item</h3>
+          <span class="lightbox-price" id="modalPrice">₹000</span>
+        </div>
+        <p class="lightbox-desc" id="modalDesc"></p>
+        <div class="lightbox-note">
+          🍞 <em>Arjun's Kitchen Note:</em> “Baking warm every morning on 12th Main. Message us on WhatsApp if you want a portion held for your evening pickup.”
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE SCRIPT -->
+  <script>
+    // 1. Animated Category Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.bake-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active button animation
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const selectedFilter = btn.getAttribute('data-filter');
+
+        let delayIndex = 0;
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          card.classList.remove('card-animate-in');
+
+          if (selectedFilter === 'all' || category === selectedFilter) {
+            card.classList.remove('card-hide');
+            // Stagger animation delay
+            card.style.animationDelay = `${delayIndex * 0.08}s`;
+            card.classList.add('card-animate-in');
+            delayIndex++;
+          } else {
+            card.classList.add('card-hide');
+          }
+        });
+      });
+    });
+
+    // 2. Interactive Photo Modal / Lightbox
+    const modal = document.getElementById('photoModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalClose = document.getElementById('modalClose');
+
+    function openPhotoModal(imgSrc, title, price, desc) {
+      modalImg.src = imgSrc;
+      modalTitle.textContent = title;
+      modalPrice.textContent = price;
+      modalDesc.textContent = desc;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePhotoModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    modalClose.addEventListener('click', closePhotoModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closePhotoModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePhotoModal();
+    });
+
+    // Also let clicking the hero polaroid open the modal with a custom note!
+    const heroPolaroid = document.querySelector('.polaroid-main');
+    if (heroPolaroid) {
+      heroPolaroid.addEventListener('click', () => {
+        openPhotoModal(
+          'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85',
+          'Stone Deck Batch #1 — Country Sourdough',
+          'Baked at 7:30 AM Daily',
+          'Scored by hand with a razor lame and baked directly on 250°C granite stone decks with high-pressure steam. Zero commercial yeast, zero additives.'
+        );
+      });
+    }
+
+    // 3. Four Rules Interactive Selector
+    const ruleNavBtns = document.querySelectorAll('.rule-nav-btn');
+    const ruleItems = document.querySelectorAll('.rule-item');
+
+    ruleNavBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        ruleNavBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const targetRule = btn.getAttribute('data-rule');
+
+        ruleItems.forEach(item => {
+          const itemRule = item.getAttribute('data-rule');
+          if (targetRule === 'all') {
+            item.style.opacity = '1';
+            item.classList.remove('highlighted-rule');
+          } else if (itemRule === targetRule) {
+            item.style.opacity = '1';
+            item.classList.add('highlighted-rule');
+          } else {
+            item.style.opacity = '0.35';
+            item.classList.remove('highlighted-rule');
+          }
+        });
+      });
+    });
+
+    // 4. Founder Story Polaroid 3D Flip
+    const storyCard = document.getElementById('storyCard');
+    const flipBtn = document.getElementById('flipBtn');
+    const inspectBtn = document.getElementById('inspectArjunBtn');
+
+    function toggleStoryFlip(e) {
+      if (e && e.stopPropagation) e.stopPropagation();
+      if (!storyCard) return;
+      storyCard.classList.toggle('is-flipped');
+      storyCard.classList.toggle('flipped');
+      const flipped = storyCard.classList.contains('is-flipped') || storyCard.classList.contains('flipped');
+      if (flipBtn) {
+        flipBtn.innerHTML = flipped ? '🔄 Flip Back to Front Photo' : "🔄 Flip to Read Arjun's Journal";
+      }
+    }
+
+    if (storyCard) {
+      storyCard.addEventListener('click', toggleStoryFlip);
+    }
+    if (flipBtn) {
+      flipBtn.addEventListener('click', (e) => {
+        if (e && e.stopPropagation) e.stopPropagation();
+        toggleStoryFlip();
+      });
+    }
+    if (inspectBtn) {
+      inspectBtn.addEventListener('click', (e) => {
+        if (e && e.stopPropagation) e.stopPropagation();
+        openPhotoModal(
+          'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=85',
+          'Arjun Sen — Founder & Head Baker',
+          'Indiranagar Bakehouse, 6:00 AM',
+          'Arjun started baking wild sourdough in Pondicherry in 2019 after 8 years in tech. Every morning at 4:30 AM, he fires up the stone deck oven for the morning bake.'
+        );
+      });
+    }
+  </script>
+</body>
+</html>

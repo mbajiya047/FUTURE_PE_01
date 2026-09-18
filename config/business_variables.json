@@ -1,0 +1,63 @@
+{
+  "business_profile": {
+    "business_name": "Roots & Whisk Artisan Cafe & Micro-Bakery",
+    "business_type": "Artisan Bakery & Specialty Coffee Bar",
+    "location": "12th Main Road, Indiranagar, Bengaluru, Karnataka",
+    "neighborhood_landmarks": "Opposite 12th Main Post Office, near 100ft Road junction",
+    "founding_year": 2021,
+    "founder_name": "Arjun Sen",
+    "founder_background": "Former corporate tech product lead who trained in sourdough fermentation in Pondicherry before opening his neighborhood micro-bakery.",
+    "core_offerings": [
+      {
+        "name": "36-Hour Wild Ferment Sourdough",
+        "description": "Slow-fermented naturally leavened bread made with stone-ground flour, water, sea salt, and our 5-year-old sourdough starter. Zero commercial yeast, zero chemical conditioners.",
+        "popular_items": ["Country Classic Loaf", "Seeded Rye", "Toasted Walnut & Cranberry", "Cheddar Jalapeño Boule"],
+        "price_range": "₹240 - ₹380 per loaf",
+        "schedule": "Warm loaves out of the oven at 7:30 AM and 3:30 PM daily"
+      },
+      {
+        "name": "Single-Estate Specialty Coffee",
+        "description": "Directly sourced arabica beans from small family plantations in Chikmagalur and Biligirirangana Hills, roasted light-to-medium weekly and pulled on a manual lever machine.",
+        "popular_items": ["Double Ristretto Flat White", "24-Hour Cascara Cold Brew", "Iced Filter Roast with Oat Milk", "Pour-Over (V60)"],
+        "price_range": "₹160 - ₹280",
+        "options": ["Oat milk (+₹40)", "Almond milk (+₹40)", "Decaf available"]
+      },
+      {
+        "name": "Daily Kitchen & Breakfast Plates",
+        "description": "Simple, unpretentious morning and afternoon food built around our fresh bread and locally grown farm produce.",
+        "popular_items": ["Whipped Ricotta & Slow-Roasted Tomato Tartine", "Smoked Chicken Salad on Toasted Rye", "Brioche French Toast with Local Wild Honey", "Soft Scrambled Eggs with Chives"],
+        "price_range": "₹280 - ₹440"
+      }
+    ],
+    "atmosphere_and_values": {
+      "vibe": "Warm, sunny, book-filled, quiet morning work haven, buzzier evening cafe",
+      "amenities": ["Individual power outlets at all wall tables", "250 Mbps fiber Wi-Fi", "Pet-friendly outdoor verandah", "Filtered water free on tap"],
+      "pet_policy": "Dogs and cats welcome in the outdoor verandah; water bowls and organic treats provided",
+      "laptop_policy": "Laptops welcome in indoor seating weekdays until 6 PM; on weekends we ask guests to keep main dining tables laptop-free during peak brunch (11 AM - 3 PM)"
+    },
+    "tone_parameters": {
+      "voice": "The real founder talking directly to a neighbor",
+      "banned_ai_words": [
+        "delve",
+        "embark",
+        "testament",
+        "tapestry",
+        "elevate",
+        "nestled",
+        "haven",
+        "symphony",
+        "unmatched",
+        "meticulously crafted",
+        "in today's fast-paced world",
+        "game-changer",
+        "culinary delight"
+      ],
+      "writing_principles": [
+        "Use concrete sensory details (baking time, flour origin, crust sound, bean notes) instead of empty buzzwords ('delicious', 'exquisite').",
+        "Speak in first-person plural ('we') and occasional first-person singular ('I').",
+        "Be transparent about policies, pricing, and ingredients without corporate disclaimers.",
+        "Sound humble, friendly, and deeply committed to craft."
+      ]
+    }
+  }
+}
